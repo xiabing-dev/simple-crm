@@ -1,0 +1,40 @@
+.mat-draw-container {
+    height: 100vh;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.sidenav {
+    width: 300px;
+
+}
+
+.logo-container {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 0 16px;
+    min-height: 64px;
+}
+
+.toolbar-row {
+    height: 56px;
+    min-height: 64px;
+}
+
+.menu-item {
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+
+.menu-item-icon {
+    margin-right: 16px;
+}
+
+.router-container {
+
+    padding: 56px 0 0 56px;
+}
