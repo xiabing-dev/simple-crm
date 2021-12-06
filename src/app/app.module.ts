@@ -18,7 +18,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormsModule } from '@angular/forms';
+// import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+// import { environment } from '../environments/environment';
+// import { provideAuth,getAuth } from '@angular/fire/auth';
+// import { provideDatabase,getDatabase } from '@angular/fire/database';
+// import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+// import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -43,7 +54,16 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressBarModule,
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideAuth(() => getAuth()),
+    // provideDatabase(() => getDatabase()),
+    // provideFirestore(() => getFirestore()),
+    // provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
